@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Face Tomorrow — Popular Uprising</title>
+<meta name="description" content="I want things to be beautiful.">
+<meta name="author" content="Lucas Peters">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://example.org/popular-uprising/01-face-tomorrow.html">
+<meta name="license" content="https://creativecommons.org/licenses/by/4.0/">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Popular Uprising">
+<meta property="og:title" content="Face Tomorrow — Popular Uprising">
+<meta property="og:description" content="I want things to be beautiful.">
+<meta property="og:url" content="https://example.org/popular-uprising/01-face-tomorrow.html">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Face Tomorrow — Popular Uprising">
+<meta name="twitter:description" content="I want things to be beautiful.">
+<link rel="preload" href="fonts/lb-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/oswald-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="next" href="02-functional-representation.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Chapter",
+  "position": 1,
+  "name": "Face Tomorrow",
+  "url": "https://example.org/popular-uprising/01-face-tomorrow.html",
+  "author": {"@type": "Person", "name": "Lucas Peters"},
+  "datePublished": "2026-06-17",
+  "inLanguage": "en",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "isPartOf": {
+    "@type": "Book",
+    "@id": "https://example.org/popular-uprising/#book",
+    "name": "Popular Uprising",
+    "url": "https://example.org/popular-uprising/"
+  }
+}
+</script>
+<style>
+/* Oswald and Libre Baskerville, SIL OFL 1.1. Self-hosted, subset to Latin.
+   See fonts/OFL-Oswald.txt and fonts/OFL-LibreBaskerville.txt. */
+@font-face{font-family:"Oswald SH";src:url(fonts/oswald-700.woff2) format("woff2");
+  font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Libre Baskerville SH";src:url(fonts/lb-400.woff2) format("woff2");
+  font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Libre Baskerville SH";src:url(fonts/lb-700.woff2) format("woff2");
+  font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Libre Baskerville SH";src:url(fonts/lb-400i.woff2) format("woff2");
+  font-weight:400;font-style:italic;font-display:swap}
+
+:root{
+  --ink:#141414; --paper:#ffffff; --muted:#6a6a6a; --rule:#e4e2df;
+  --orange:#E8590C; --wash:#faf9f7;
+  --text:"Libre Baskerville SH",Baskerville,"Baskerville Old Face","Times New Roman",Georgia,serif;
+  --display:"Oswald SH","Oswald",Haettenschweiler,"Arial Narrow Bold","Arial Narrow",Impact,sans-serif;
+  --measure:41rem;
+}
+@media (prefers-color-scheme:dark){
+  :root{--ink:#e8e6e3;--paper:#131313;--muted:#9a9691;--rule:#2e2c2a;--wash:#191919;--orange:#ff8a3d}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--text);font-size:1.0625rem;line-height:1.62;
+  font-kerning:normal;font-variant-ligatures:common-ligatures;
+  text-rendering:optimizeLegibility;
+}
+.wrap{max-width:var(--measure);margin:0 auto;padding:0 1.5rem}
+@media (max-width:30rem){
+  body{font-size:1rem;line-height:1.6}
+  .wrap{padding:0 1.05rem}
+}
+.wide{max-width:48rem}
+
+/* Libre Baskerville has a large x-height and a wide set; utility labels are
+   set in it uppercase and tracked out rather than in a second sans face. */
+.label{
+  font-family:var(--text);font-size:.66rem;font-weight:700;letter-spacing:.19em;
+  text-transform:uppercase;line-height:1.4
+}
+
+/* ---- masthead ------------------------------------------------------- */
+.masthead{border-bottom:1px solid var(--rule);margin-bottom:3.5rem}
+.masthead .wrap{padding-top:1.15rem;padding-bottom:1.15rem;
+  display:flex;gap:1rem;justify-content:space-between;align-items:baseline;flex-wrap:wrap}
+.masthead a{
+  font-family:var(--display);font-weight:700;font-size:.9rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink);text-decoration:none
+}
+.masthead a:hover{color:var(--orange)}
+.masthead .loc{font-family:var(--text);font-size:.66rem;font-weight:700;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--muted)}
+
+/* ---- title page ------------------------------------------------------ */
+.titlepage{padding:3rem 0 4rem;border-bottom:4px solid var(--orange)}
+.titlepage h1{
+  font-family:var(--display);font-weight:700;font-size:clamp(3.2rem,12.5vw,6rem);
+  line-height:.9;letter-spacing:.005em;text-transform:uppercase;margin:0 0 1.15rem
+}
+.titlepage .sub{font-size:1.06rem;font-style:italic;color:var(--ink);margin:0 0 2rem;line-height:1.45}
+.titlepage .byline{
+  font-family:var(--display);font-weight:700;font-size:1.15rem;letter-spacing:.13em;
+  text-transform:uppercase;margin:0 0 .5rem
+}
+.imprint{font-family:var(--text);font-size:.78rem;line-height:2;color:var(--muted);margin:2.5rem 0 0}
+.dedication{font-style:italic;color:var(--muted);margin:3rem 0 0;text-align:center;font-size:.95rem}
+
+/* ---- contents -------------------------------------------------------- */
+.contents{margin:3.5rem 0}
+.contents h2,.frontmatter h2{
+  font-family:var(--text);font-size:.66rem;font-weight:700;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 1.4rem
+}
+.toc{list-style:none;margin:0;padding:0}
+.toc li{border-top:1px solid var(--rule)}
+.toc li:last-child{border-bottom:1px solid var(--rule)}
+.toc a{
+  display:grid;grid-template-columns:2.8rem 1fr;gap:1rem;align-items:baseline;
+  padding:1rem 0;text-decoration:none;color:var(--ink)
+}
+.toc a:hover{color:var(--orange)}
+.toc .num{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--orange);
+  letter-spacing:.04em}
+.toc .name{font-family:var(--display);font-weight:700;font-size:1.5rem;line-height:1.15;
+  font-variant-caps:small-caps;letter-spacing:.02em}
+.toc .blurb{grid-column:2;font-family:var(--text);font-size:.78rem;color:var(--muted);
+  line-height:1.6;margin-top:.4rem}
+
+/* ---- chapter openers ------------------------------------------------- */
+.opener{margin:0 0 2.6rem;padding-top:.5rem}
+.opener .eyebrow{
+  font-family:var(--text);font-size:.66rem;font-weight:700;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--orange);display:block;margin:0 0 .8rem
+}
+/* Oswald ships no true small-cap glyphs, so the browser synthesises them.
+   The heading stays one clean text node -- no per-letter spans -- because an
+   extractor must read "Face Tomorrow", not fragments of it. */
+.opener h1,.opener h2{
+  font-family:var(--display);font-weight:700;letter-spacing:.022em;line-height:1.04;
+  font-size:clamp(2.3rem,8vw,3.6rem);margin:0 0 1.15rem;
+  font-variant-caps:small-caps;font-feature-settings:"smcp" 1
+}
+.opener .rule{border:0;border-top:4px solid var(--orange);margin:0 0 1.6rem;width:100%}
+article + article .opener{margin-top:5.5rem;padding-top:3.5rem;border-top:1px solid var(--rule)}
+
+/* ---- body ------------------------------------------------------------ */
+article p{margin:0 0 1.3em;position:relative;hyphens:auto}
+blockquote{
+  margin:2.1rem 0;padding:0 0 0 1.3rem;border-left:3px solid var(--orange);
+  font-style:italic;color:var(--ink)
+}
+blockquote p{margin:0}
+hr.break{border:0;margin:2.6rem 0;text-align:center;overflow:visible;height:0}
+hr.break::after{
+  content:"\2666";display:block;margin-top:-.75em;color:var(--orange);
+  font-size:.75rem;letter-spacing:.6em;text-indent:.6em
+}
+
+/* ---- paragraph permalinks (the citation affordance) ------------------ */
+.pl{
+  position:absolute;left:-2.2rem;top:.1em;width:1.6rem;text-align:right;
+  font-family:var(--text);font-size:.8rem;color:var(--orange);text-decoration:none;
+  opacity:0;transition:opacity .12s ease
+}
+p:hover > .pl,.pl:focus{opacity:1}
+.pl:focus-visible{outline:2px solid var(--orange);outline-offset:2px;opacity:1}
+:target{background:color-mix(in srgb,var(--orange) 14%,transparent)}
+@media (max-width:58rem){.pl{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ---- pagination + footer -------------------------------------------- */
+.pager{
+  display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;
+  margin:4.5rem 0 0;padding-top:1.6rem;border-top:4px solid var(--orange)
+}
+.pager a{
+  font-family:var(--display);font-weight:700;font-size:1.15rem;letter-spacing:.02em;
+  font-variant-caps:small-caps;text-decoration:none;color:var(--ink);max-width:16rem
+}
+.pager a:hover{color:var(--orange)}
+.pager .dir{display:block;font-family:var(--text);font-size:.64rem;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:.35rem;font-weight:700;
+  font-variant-caps:normal}
+.pager .next{text-align:right;margin-left:auto}
+footer.site{
+  margin-top:5rem;border-top:1px solid var(--rule);background:var(--wash);
+  font-family:var(--text);font-size:.78rem;line-height:1.85;color:var(--muted)
+}
+footer.site .wrap{padding-top:2.2rem;padding-bottom:3rem}
+footer.site a{color:var(--muted)}
+footer.site a:hover{color:var(--orange)}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:1rem;top:1rem;position:fixed;background:var(--paper);color:var(--ink);
+  padding:.6rem 1rem;border:2px solid var(--orange);z-index:9;font-family:var(--text)}
+
+/* ---- print ----------------------------------------------------------- */
+@media print{
+  :root{--ink:#000;--paper:#fff;--muted:#444;--rule:#bbb}
+  body{font-size:10.5pt;line-height:1.45}
+  .masthead,.pager,.pl,footer.site{display:none}
+  .wrap{max-width:none;padding:0}
+  article{page-break-before:always}
+  article:first-of-type{page-break-before:avoid}
+  .opener h1,.opener h2{font-size:22pt}
+  a{text-decoration:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to text</a>
+<nav class="masthead">
+  <div class="wrap">
+    <a href="/popular-uprising/">Popular Uprising</a>
+    <span class="loc">Chapter 1 of 5</span>
+  </div>
+</nav>
+<main id="main" class="wrap">
+<article>
+  <header class="opener">
+    <hr class="rule">
+    <span class="eyebrow">Chapter One</span>
+    <h1>Face Tomorrow</h1>
+  </header>
+    <p id="c1p1"><a class="pl" href="01-face-tomorrow.html#c1p1" aria-label="Permalink to paragraph c1p1">&#182;</a>I want things to be beautiful.</p>
+    <p id="c1p2"><a class="pl" href="01-face-tomorrow.html#c1p2" aria-label="Permalink to paragraph c1p2">&#182;</a>People are numb. We forget we have a choice.</p>
+    <p id="c1p3"><a class="pl" href="01-face-tomorrow.html#c1p3" aria-label="Permalink to paragraph c1p3">&#182;</a>It’s like we’re at the end of history. Endless sequels. Reboots of reboots. Remixes of remixes. The endless rotation of recycled trends. The perpetual vibe shift that announces a new era every few months without one ever arriving. Our society is saturated with nostalgia. People debate whether we peaked in the '50s or the '90s, or some other time, but “today” is never an answer. Nobody thinks the future is real.</p>
+    <p id="c1p4"><a class="pl" href="01-face-tomorrow.html#c1p4" aria-label="Permalink to paragraph c1p4">&#182;</a>“Stuck culture.” “Nothing ever happens.”</p>
+    <p id="c1p5"><a class="pl" href="01-face-tomorrow.html#c1p5" aria-label="Permalink to paragraph c1p5">&#182;</a>This week yet another country bombed. Another mass shooting. Another man killed by the police. Another poor young woman killed by some lunatic with a rap sheet long enough to fill a Bible. Another scandal, another outrage, another violation of public trust. Forgotten immediately by next week's news cycle.</p>
+    <p id="c1p6"><a class="pl" href="01-face-tomorrow.html#c1p6" aria-label="Permalink to paragraph c1p6">&#182;</a>Economic stagnation. Delayed family formation. Frozen social mobility. The loneliness epidemic. Demographic collapse. Rampant mental illness. Deaths of despair. An entire generation with its youth confiscated and its adulthood shaping up to be just as barren.</p>
+    <p id="c1p7"><a class="pl" href="01-face-tomorrow.html#c1p7" aria-label="Permalink to paragraph c1p7">&#182;</a>There’s a new tragedy every hour and everyone just looks away.</p>
+    <p id="c1p8"><a class="pl" href="01-face-tomorrow.html#c1p8" aria-label="Permalink to paragraph c1p8">&#182;</a>We choose not to see. How can things be beautiful?</p>
+    <p id="c1p9"><a class="pl" href="01-face-tomorrow.html#c1p9" aria-label="Permalink to paragraph c1p9">&#182;</a>It’s not for lack of trying. You’ve all tried. Left, Right, and Center. People have been trying to fix this country for decades and it’s never worked. This numbness, it’s the signature output of a failing order that has hyperconstricted productive possibility-space. It’s learned helplessness on a civilizational scale. People lose hope. We forget we have options.</p>
+    <p id="c1p10"><a class="pl" href="01-face-tomorrow.html#c1p10" aria-label="Permalink to paragraph c1p10">&#182;</a>In the current system, “doing what you’re supposed to do” is a crapshoot and the only consistently rewarded behavior is grifting. A political order is a reward function. What it rewards, it produces more of. The actors within our society need to be rewarded for correct behavior, that is, behavior that is beneficial to the public good. The current order rewards rent-seeking, regulatory arbitrage, credentialism, and performative compliance. This is not a failure of the system, it is the system’s designed output. The system does not malfunction. The dissonance comes from the difference between the system’s declared purpose and actual purpose.</p>
+    <p id="c1p11"><a class="pl" href="01-face-tomorrow.html#c1p11" aria-label="Permalink to paragraph c1p11">&#182;</a>Activists target one face of the system. They isolate one node. They protest policing, politicians, parties, banks, media corporations. Their dissent is easily contained. Protest becomes another brand that can be marketed and profited from. Political backlash against one politician, platform, party, is weaponized by its opposition within the same system, who will always pull the rug out from under their grassroots supporters. Playing this way the house always wins, and the pessimists become right. Protestors and political agitators become their own gatekeepers, redirecting their own attention, energy, and resources away from the source of what it is they’re really fighting against: the Regime.</p>
+    <p id="c1p12"><a class="pl" href="01-face-tomorrow.html#c1p12" aria-label="Permalink to paragraph c1p12">&#182;</a>When the Regime gives its protestors what they want, the monkey’s paw curls. Protest the war? They let the terrorists win. Protest police brutality? They stop policing poor neighborhoods. When the two-party system cannot destroy a movement, the protestors are not denied. The Regime delivers them the most degraded, spiteful, administratively convenient version of what they wanted. Whether the dissenters win or lose, nothing changes, and people start believing that nothing can change.</p>
+    <p id="c1p13"><a class="pl" href="01-face-tomorrow.html#c1p13" aria-label="Permalink to paragraph c1p13">&#182;</a>The Tea Party wanted bank reform and fiscal restraint. They got Tea Party branded Republicans who delivered what Republicans always deliver: tax cuts and empty culture war platitudes. The movement was metabolized in less than 18 months. The “victory” of the 2010 midterms was the moment the movement died.</p>
+    <p id="c1p14"><a class="pl" href="01-face-tomorrow.html#c1p14" aria-label="Permalink to paragraph c1p14">&#182;</a>The Alt-Right is an even cleaner example of the Regime behaving like a spiteful genie. They wanted “civilizational renewal” and explicit identity politics. They wanted to elect Trump. Trump won. They got a couple years of mainstream permission to be loud and obnoxious, followed by mass deplatforming and prosecutions as soon as their guy got into office. Many who supported Trump got stabbed in the back, and he became one of the most unpopular presidents in modern U.S. history. Their victory did nothing but hand their enemies the cause to suppress them. The Alt-Right wanted a new aristocracy and they got a con man who paints everything gold.</p>
+    <p id="c1p15"><a class="pl" href="01-face-tomorrow.html#c1p15" aria-label="Permalink to paragraph c1p15">&#182;</a>Occupy Wall Street wanted to break finance capital. They committed to leaderless resistance as a principle. So they had no one to negotiate and no coherent demands to negotiate for. Structureless, the movement saw Democrats steal rhetoric about “the 99%” and ignore everything else. Wall Street continued to write government policy because the principles that founded the Occupy movement guaranteed that whatever survived would be only what its enemies were willing to permit.</p>
+    <p id="c1p16"><a class="pl" href="01-face-tomorrow.html#c1p16" aria-label="Permalink to paragraph c1p16">&#182;</a>The Libertarian Party has been running candidates for over half a century. They have never once won a federal office. They have never once broken double digits in a presidential election. They sincerely believe that a third party will eventually win just because the two-party system is bad, and moreover, that this third party will somehow be them. Fundamentally they lose because they’re an unserious party that doesn’t want to win. They run for big federal offices as a kind of principled protest without actually doing anything to build the support networks that they would need to get anything out of their victories if they had them. Furthermore, they don’t actually promise any vision for the future or any real alternative to the current way of things that’s worth taking a risk on. They’re Republicans who smoke weed. Anyone competent just gets poached by the Republican Party. They’re a release valve that thinks it's outside the system.</p>
+    <p id="c1p17"><a class="pl" href="01-face-tomorrow.html#c1p17" aria-label="Permalink to paragraph c1p17">&#182;</a>The Green Party is the same thing for the other half. Decades of running, no federal victories. The 2000 election is eternally held over their heads. They wanted environmental and progressive politics and it got us the Iraq War. In practice, they only exist to reinforce the narrative that alternatives can’t work and only make things worse.</p>
+    <p id="c1p18"><a class="pl" href="01-face-tomorrow.html#c1p18" aria-label="Permalink to paragraph c1p18">&#182;</a>Even in the hypothetical situation where one or both of these parties displaced the major parties, would it make a real difference?</p>
+    <p id="c1p19"><a class="pl" href="01-face-tomorrow.html#c1p19" aria-label="Permalink to paragraph c1p19">&#182;</a>They would become captured by the same voting blocs, the same donor bases, most of the same institutions, forced to work within the same legal architecture, the same national pool of available staffing personnel. Some small things would change, but the incentive structures shaping available decision trees would remain the same. A world with the Greens and the Libertarians would just be a rebrand of the world with the Democrats and Republicans. The most important structural problems that America faces would not be solved.</p>
+    <p id="c1p20"><a class="pl" href="01-face-tomorrow.html#c1p20" aria-label="Permalink to paragraph c1p20">&#182;</a>Infiltrationist strategies about co-opting one of the major parties or another to make it serve your ends are a pipe dream. It’s mechanically impossible. By joining the Regime, you are making your success contingent on its success. Your win conditions are its reward functions. Any grand dream about the direction you want to steer the country toward is in opposition to what decisions you have to make to succeed in that environment. You do not capture the party. The party captures you.</p>
+    <p id="c1p21"><a class="pl" href="01-face-tomorrow.html#c1p21" aria-label="Permalink to paragraph c1p21">&#182;</a>The two-party system is a duopoly performing competition. It gatekeeps the system from outsiders while performing the fiction of open democratic competition. We’re living with all of the downsides of a one-party state with none of the benefits. The duopoly is like two sales departments of the same firm, each capturing different demographics while delivering the same product: continuity of the Regime. People say the parties fight constantly. They do. They fight over who gets to run the firm this season, not whether the firm should exist. The firm always wins.</p>
+    <p id="c1p22"><a class="pl" href="01-face-tomorrow.html#c1p22" aria-label="Permalink to paragraph c1p22">&#182;</a>Where the two parties openly cooperate is where the duopoly is most apparent. Ballot access laws. Debate qualification rules. Campaign finance structures. Primary calendars. Federal Election Commission rules. Closed donor and media networks. Winner-takes-all incentives. Their conflict is only real at the personnel and cultural level. When a real movement with its own energy and its own base appears outside the duopoly, the parties do not fight it. They compete to absorb it. Whoever absorbs it gains a new voting bloc. Whichever fails gains a new scarecrow to frighten their own base with. The duopoly poaches any real talent from political dissenters, leaving them impotent and barren. What we’re left with is performative dissent. The consistent failure of dissident political actors to provide any desirable, let alone plausible alternative, has the whole country convinced that no such alternative could ever exist. Meanwhile they have us fighting each other over which evil is the lesser.</p>
+    <p id="c1p23"><a class="pl" href="01-face-tomorrow.html#c1p23" aria-label="Permalink to paragraph c1p23">&#182;</a>The duopoly has one supreme anxiety: that someone might see past it entirely. Not that voters might choose the other side, not that the voters might choose neither, but that someone will target what’s behind them. The Regime has two components, the constitutional order and paraconstitutional institutions that both depend on each other in order to function. The duopoly is one paraconstitutional structure among many. If the duopoly failed, the Regime would grow a new one.</p>
+    <p id="c1p24"><a class="pl" href="01-face-tomorrow.html#c1p24" aria-label="Permalink to paragraph c1p24">&#182;</a>Most political resistance in America is not strategic. It is moral theater. People protest to relieve internal guilt, prove righteousness, demonstrate compassion, or absolve themselves of complicity. Their enemy, predictably, only has to give them symbolic release. Moral orders do not generate themselves. They are the cultural exhaust of whichever power produced and now sustains them. Normativity is a consequence of power. The morality you use to judge the Regime was shaped by the Regime. Your self-righteous indignation is another of its instruments.</p>
+    <p id="c1p25"><a class="pl" href="01-face-tomorrow.html#c1p25" aria-label="Permalink to paragraph c1p25">&#182;</a>Dissident political movements have one thing in common, they put their morals first and make strategy secondary if they have any strategy at all. One moral order is not overcome by another through sermons alone. You often hear people say they support some such issue, cause, or movement, without meaningfully doing anything to advance that agenda. A moral order can only be overcome by a power that establishes a different one. The Regime tells you belief alone changes the world because belief alone is the kind of resistance it can’t possibly lose to. The only meaningful act of rebellion left is to stop moralizing and get to work.</p>
+    <p id="c1p26"><a class="pl" href="01-face-tomorrow.html#c1p26" aria-label="Permalink to paragraph c1p26">&#182;</a>Mass politics works. Mass movements are just about the only thing that has ever produced positive feedback. But that energy needs the right vehicle and the right destination. Most recent failures failed at both. Yet they’ve given us an abundance of negative data. If a method repeatedly produces absorption, dissipation, capture, paralysis — failure, then that method has been falsified. If we’re going to fix this country, we need to know how we’re getting there. We need to employ the scientific method constantly, test our theory through praxis, and be open to that theory being falsified and adapt quickly. More importantly, we need to know where we’re going. We need a plausible alternative that addresses the core failure modes of the current system without overcorrecting. Before that, we need to define exactly what it is that we’re replacing.</p>
+    <p id="c1p27"><a class="pl" href="01-face-tomorrow.html#c1p27" aria-label="Permalink to paragraph c1p27">&#182;</a>The Regime has no succession method because no sovereign office is being succeeded. What it has are mechanisms for personnel replacement. The Regime reproduces itself through processes that include no point at which the people actually decide. Elections, conventions, ratifications are effectively just rituals. The people do not decide the Regime’s direction, they ratify from a selection of curated choices. Every four years, there is a transfer of office without a transfer of power.</p>
+    <p id="c1p28"><a class="pl" href="01-face-tomorrow.html#c1p28" aria-label="Permalink to paragraph c1p28">&#182;</a>If power does not transfer, then it is held somewhere. Sovereignty does not disappear because of checks and balances. It only redistributes itself somewhere those checks cannot reach. The pretense of distributed power is a cover for power that is in fact concentrated, only not in any place that any citizen can easily name or contest. The executive, the legislature, the courts, the states, the people. The system is designed to make sovereignty appear to be everywhere, and therefore effectively nowhere. In practice, the sovereign is the paraconstitutional ecosystem capable of deciding the exception. Which laws are enforced, which crises count as emergency, which institutions are legitimate, which candidates are viable, which scandals matter. They are unaccountable because they are nowhere named as a single body that could be held to account. The Regime’s deepest achievement is that it has made its own sovereign unspeakable, unknowable, and therefore, uncontestable.</p>
+    <p id="c1p29"><a class="pl" href="01-face-tomorrow.html#c1p29" aria-label="Permalink to paragraph c1p29">&#182;</a>The failure points of prior anti-establishment political movements were, in some respects, forgivable mistakes. What all have done that is unforgivable, however, is to not know what it even is that they’re succeeding. Mistakes in leadership, organization, ideology, these can be patched. This gravest failure is not a bug. They could not see the forest for the trees. The Regime is not any individual node or series of nodes.</p>
+    <p id="c1p30"><a class="pl" href="01-face-tomorrow.html#c1p30" aria-label="Permalink to paragraph c1p30">&#182;</a>The Regime is the whole constitutional- paraconstitutional order in its totality. Cut off one head and two grow back. Their failure that is so unforgivable is that they were not even attempting to succeed the Regime but only operating inside of it. They did not know what they were trying to replace, so they were incapable of replacing it. “Regime change” is not a slogan for putting different people in the same offices. It is not a slogan for changing policy at the margins. It is not a slogan for dethroning a handful of oligarchs while leaving their replacement mechanisms intact. Regime change means replacing the entire system. This is the work the Popular Party exists to do.</p>
+</article>
+
+<nav class="pager">
+  <a class="next" href="02-functional-representation.html"><span class="dir">Next</span>Functional Representation</a>
+</nav>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p><strong>Popular Uprising: The Manifesto of the Popular Party</strong><br>
+    By Lucas Peters. First published June 17, 2026.<br>
+    Copyright © 2026 Popular Party. Released under
+    <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> &mdash; copy it, quote it, translate it,
+    reprint it. Attribution is the only condition.</p>
+    <p><a href="/popular-uprising/">Contents</a> &middot;
+       <a href="/popular-uprising/full-text.html">Read in one page</a> &middot;
+       <a href="/popular-uprising/popular-uprising.txt">Plain text</a></p>
+  </div>
+</footer>
+</body>
+</html>
