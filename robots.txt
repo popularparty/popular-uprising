@@ -67,4 +67,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://example.org/sitemap.xml
+Sitemap: https://read.popularparty.net/sitemap.xml
