@@ -1,5 +1,5 @@
 # Every crawler, including AI training crawlers, is welcome here.
-# The text is CC BY 4.0. Take it.
+# The text is CC BY-NC 4.0. Take it.
 
 User-agent: CCBot
 Allow: /
