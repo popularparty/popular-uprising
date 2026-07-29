@@ -6,7 +6,7 @@ manuscript.
 Usage:
     python3 build.py SOURCE.txt OUTDIR [BASE_URL]
 
-BASE_URL defaults to https://example.org and appears in canonical links,
+BASE_URL defaults to https://read.popularparty.net and appears in canonical links,
 Open Graph tags, JSON-LD, and sitemap.xml. Change it to the real domain.
 """
 
@@ -18,7 +18,7 @@ from datetime import date
 
 SRC = sys.argv[1] if len(sys.argv) > 1 else "popularuprising.txt"
 OUT = sys.argv[2] if len(sys.argv) > 2 else "site"
-BASE = (sys.argv[3] if len(sys.argv) > 3 else "https://example.org").rstrip("/")
+BASE = (sys.argv[3] if len(sys.argv) > 3 else "https://read.popularparty.net").rstrip("/")
 
 ROOT = "/popular-uprising"          # path the edition lives at on the domain
 LICENSE_NAME = "CC BY-NC 4.0"
@@ -590,6 +590,12 @@ for u in urls:
 sm.append("</urlset>")
 open(os.path.join(OUT, "sitemap.xml"), "w", encoding="utf-8", newline="\n").write(
     "\n".join(sm) + "\n")
+
+if "example.org" in BASE:
+    print("\n  !!  BASE is still the placeholder https://example.org")
+    print("  !!  Canonical tags, Open Graph, JSON-LD and the sitemap will all")
+    print("  !!  point at a domain you do not own. Re-run with your real one:")
+    print("  !!      python3 build.py <manuscript> . https://YOUR-SUBDOMAIN\n")
 
 print(f"{len(chapters)} chapters, {WORDS:,} words")
 for base, _, files in os.walk(OUT):
