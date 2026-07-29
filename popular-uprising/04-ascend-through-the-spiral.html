@@ -98,6 +98,10 @@ body{
 .masthead a:hover{color:var(--orange)}
 .masthead .loc{font-family:var(--text);font-size:.66rem;font-weight:700;letter-spacing:.19em;
   text-transform:uppercase;color:var(--muted)}
+.masthead .crumbs{display:flex;gap:.55rem;align-items:baseline;flex-wrap:wrap}
+.masthead a.loc{text-decoration:none}
+.masthead a.loc:hover{color:var(--orange)}
+.masthead .sep{letter-spacing:0}
 
 /* ---- title page ------------------------------------------------------ */
 .titlepage{padding:3rem 0 4rem;border-bottom:4px solid var(--orange)}
@@ -220,8 +224,8 @@ a:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
 <a class="skip" href="#main">Skip to text</a>
 <nav class="masthead">
   <div class="wrap">
-    <a href="./">Popular Uprising</a>
-    <span class="loc">Chapter 4 of 5</span>
+    <a href="https://www.popularparty.net">Popular Party</a>
+    <span class="crumbs"><a class="loc" href="https://read.popularparty.net/">Texts</a><span class="loc sep">&middot;</span><span class="loc">Chapter 4 of 5</span></span>
   </div>
 </nav>
 <main id="main" class="wrap">
