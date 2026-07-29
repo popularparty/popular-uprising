@@ -329,7 +329,7 @@ def page(*, title, desc, canonical, body, extra_head="", wide=False, loc=""):
 <a class="skip" href="#main">Skip to text</a>
 <nav class="masthead">
   <div class="wrap{' wide' if wide else ''}">
-    <a href="{ROOT}/">{esc(TITLE.title())}</a>
+    <a href="./">{esc(TITLE.title())}</a>
     <span class="loc">{esc(loc)}</span>
   </div>
 </nav>
@@ -343,9 +343,9 @@ def page(*, title, desc, canonical, body, extra_head="", wide=False, loc=""):
     {esc(COPYRIGHT)}. Released under
     <a rel="license" href="{LICENSE_URL}">{LICENSE_NAME}</a> &mdash; copy it, quote it, translate it,
     reprint it, teach it. Credit the author and don't sell it.</p>
-    <p><a href="{ROOT}/">Contents</a> &middot;
-       <a href="{ROOT}/full-text.html">Read in one page</a> &middot;
-       <a href="{ROOT}/popular-uprising.txt">Plain text</a></p>
+    <p><a href="./">Contents</a> &middot;
+       <a href="full-text.html">Read in one page</a> &middot;
+       <a href="popular-uprising.txt">Plain text</a></p>
   </div>
 </footer>
 </body>
